@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+
+void main() {
+   runApp(MaterialApp(
+    home: SafeArea(
+      child: Scaffold(
+        body: MyWidget()
+      )
+    ),
+    debugShowCheckedModeBanner: false,
+  ));
+}
+// text
+// color
+// click
+// size
+// padding
+// margin
+// shape
+// shadow
+// border
+// icon
+// disable
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(20),
+      child: ElevatedButton.icon(
+          onPressed: null,
+          style: ElevatedButton.styleFrom(
+            // backgroundColor: Colors.green,
+            // foregroundColor: Colors.white,
+            // // minimumSize: const Size(240, 80),
+            // padding: EdgeInsets.all(10),
+            // shape: RoundedRectangleBorder(
+            //   borderRadius: BorderRadius.circular(30)
+            // ),
+            //   elevation: 30,
+            //   shadowColor: Colors.black.withOpacity(0.5),
+            // side: const BorderSide(width: 1, color: Colors.yellow),
+            disabledBackgroundColor: Colors.grey,
+            disabledForegroundColor: Colors.white,
+          ),
+          icon: const Icon(Icons.edit, size: 30,),
+          label: const Text('Elevated Button', style: TextStyle(fontSize: 28),)
+      ),
+    );
+  }
+}

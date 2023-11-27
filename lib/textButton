@@ -1,0 +1,27 @@
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(20),
+      child: TextButton(
+          onPressed: null,
+          style: TextButton.styleFrom(
+            // foregroundColor:Colors.orange,
+            // backgroundColor: Colors.blue,
+            // padding: EdgeInsets.all(10),
+            // // minimumSize: Size(width, height)
+            // shape: RoundedRectangleBorder(
+            //   borderRadius: BorderRadius.circular(35)
+            // ),
+            // elevation: 8,
+            // shadowColor: Colors.green.withOpacity(0.5),
+            // side: const BorderSide(width: 2, color: Colors.black)
+            disabledForegroundColor: Colors.white,
+            disabledBackgroundColor: Colors.grey,
+          ),
+          // icon: const Icon(Icons.add, size: 30),
+          child: const Text('Disable button', style: TextStyle(fontSize: 20, ),)
+      ),
+    );
+  }
+}

@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+
+void main() {
+   runApp(MaterialApp(
+    home: SafeArea(
+      child: Scaffold(
+        body: MyWidget()
+      )
+    ),
+    debugShowCheckedModeBanner: false,
+  ));
+}
+// khong/co child
+// size: w & h
+// aligment: Aligment, AligmentDirectional, FractionalOffset
+// padding
+// margin
+// decoration: color, shape, boderRadius, Border
+// transform
+
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: SizedBox.expand(
+        // width: double.infinity, (1)
+        // height: double.infinity, (2)
+        //      (1) + (2) = = SizedBox.expand
+        child: ElevatedButton(
+            onPressed: (){},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.green,
+              foregroundColor: Colors.white,
+            ),
+            child: const Text('ThanhDat', style: TextStyle(fontSize: 30,),),
+        ),
+      ),
+    );
+  }
+}
